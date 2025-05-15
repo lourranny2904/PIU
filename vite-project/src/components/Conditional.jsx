@@ -67,7 +67,7 @@ export default function Troca(){
         <>
             <div>
                 <button onClick={() => setValor(valor+1)}>Cliques</button>
-            </div>
+            </div> 
 
             {isLogged ? <Redux></Redux> : <Images></Images>}
         </>
