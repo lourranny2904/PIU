@@ -1,29 +1,28 @@
 //Renderização condicional
 //Opção 1 - Estrutura tradicional de if e else
 
-import Images from "./Images";
-import FirstComponent from "./FirstComponent";
-
-function Conditional(){
-     let content;
-     let isLogged = true;
 
 
-     if(isLogged){
-         content = <Images />
-     } else {
-         content = <FirstComponent />
-     }
+// function Conditional(){
+//      let content;
+//      let isLogged = true;
 
-     return(
-         <>
-             {content}
-             <button onClick={() => {content = true}}>Mudar Estado</button>
-         </>
-     )
- }
 
- export default Conditional
+//      if(isLogged){
+//          content = <Images />
+//      } else {
+//          content = <FirstComponent />
+//      }
+
+//      return(
+//          <>
+//              {content}
+//              <button onClick={() => {content = true}}>Mudar Estado</button>
+//          </>
+//      )
+//  }
+
+//  export default Conditional
 
 // Opção 2 - Estrutura condicional reduzida
 
@@ -47,28 +46,31 @@ function Conditional(){
 
 // Opção 3 - Utilizando useStae
 
-// import Images from "./Images";
-// import FirstComponent from "./FirstComponent";
 
-// import { useState } from "react";
+import { useState } from "react"
+import Images from "./Images";
+import Redux from "./Redux";
 
-// function Conditional(){
-//     let content;
-//     let [isLogged, setIsLogged] = useState(false)
+export default function Troca(){
+    let [valor, setValor] = useState(0);
+    let isLogged = false;
 
+    if (valor % 2 === 0){
 
-//     if(isLogged){
-//         content = <Images />
-//     } else {
-//         content = <FirstComponent />
-//     }
+        isLogged = false 
+    }else{
+        isLogged = true
+    };
 
-//     return(
-//         <>
-//             {content}
-//             <button onClick={() => setIsLogged(!isLogged)}>Mudar Estado</button>
-//         </>
-//     )
-// }
+    return(
 
-// export default Conditional
+        <>
+            <div>
+                <button onClick={() => setValor(valor+1)}>Cliques</button>
+            </div>
+
+            {isLogged ? <Redux></Redux> : <Images></Images>}
+        </>
+    )
+
+}

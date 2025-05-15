@@ -11,7 +11,7 @@ function Images (){
         {/* opção 1 - importando de public, podemos referenciar como se estivesse em src. 
         Obs.: Tag figure permite usar a opção de legenda figcaption */}
         <figure>
-            <img src="./bridge.jpg" alt="Imagem de Ponte" />
+            <img src="../assets/nature.jpg" alt="Imagem de Ponte" />
             <figcaption>Imagem de uma ponte</figcaption>
         </figure>
         <figure>

@@ -1,20 +1,32 @@
 
+import FirstComponent from "./components/FirstComponent"
+import TemplateExpression from "./components/TemplateExpressions"
+import AnonymousFunction from "./components/AnonymousFunction"
 import './App.css'
-import Escopo from './components/Escopo'
-import Escopo2 from './components/Escopo2'
-import Redux from './components/Redux'
-import Change from './components/Change'
+import Events from "./components/Events"
+import Images from "./components/Images"
+import ChangeBackground from "./components/ChangeBackground"
+import ChangeValue from "./components/ChangeValue"
+import Conditional from "./components/Conditional"
+
 
 function App() {
+
   return (
     <>
-      <Escopo></Escopo>
-      <Escopo2></Escopo2>
-      <Redux></Redux>
-      <Change></Change>
+      {/* <FirstComponent/>
+      <FirstComponent/>
+      <FirstComponent/>
+      <TemplateExpression />
+      <AnonymousFunction />
+      <Events />
+      <Images/>
+      <ChangeBackground/>
+      <ChangeValue /> */}
 
+      <Conditional />
     </>
   )
 }
 
-export default App  
+export default App
