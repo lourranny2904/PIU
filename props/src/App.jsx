@@ -1,6 +1,7 @@
 import Props from './componentes/Props'
 import Card from './componentes/Card'
 import Children from './componentes/Children'
+import Texto from './componentes/Texto'
 import './App.css'
 
 function App() {
@@ -13,6 +14,10 @@ function App() {
       <br />
       <Children>
         <Card/>
+      </Children>
+      <br />
+      <Children>
+        <Texto></Texto>
       </Children>
     </>
   )

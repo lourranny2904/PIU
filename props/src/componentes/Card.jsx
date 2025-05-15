@@ -9,6 +9,7 @@ export default function Card(){
                 <img src={screen} alt="Imagem abstrata de corrente" />
                 <figcaption>Imagem de corrente em tons vermelhos</figcaption>
             </figure>
+            
         </div>
     )
 }
