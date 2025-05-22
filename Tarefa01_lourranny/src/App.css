@@ -1,0 +1,15 @@
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+.galeria img {
+  width: 150px; /* Ajuste conforme necessário */
+  margin: 10px;
+  border-radius: 8px; /* Para bordas arredondadas */
+}
