@@ -1,26 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Boas_vindas from './Componentes/Boas_vindas'
-import Props from './Componentes/Props'
-import Pessoa from './Componentes/Pessoa'
+import Tema from './Componentes/Tema'
+import Galeria from './Componentes/Galeria'
+
+
+const personagens = [
+    { src: "src/assets/barbie_perola.jpg", 
+      titulo: "Princesa das pérolas", 
+      descricao: "filme de sereia no fundo do mar" },
+    {src: "src/assets/barbie_pop.png",
+        titulo:"A princesa e a pop star",
+        descricao: " muita música "},
+    {src: "src/assets/barbie_portal.png",
+          titulo:"Barbie e o portal secreto",
+          descricao: "ela acha um portal"}
+  ]
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
-    <> 
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      <Boas_vindas></Boas_vindas>
-      <Props nome = "Lourranny"/>
-      <Pessoa nome= "piettro" idade= "4" foto = "https://gru.ifsp.edu.br/images/phocagallery/galeria2/image03_grd.png"/>
-
-
-      </div>
+    <>
+      <Tema/>
+      <Galeria personagens = {personagens}/>
     </>
   )
 }
