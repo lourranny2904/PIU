@@ -1,0 +1,118 @@
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+  }
+  
+  /* Formulário */
+  form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Lista de tarefas */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 650px;
+  }
+  
+
+  .tarefas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    color: black;
+  }
+  
+  .tarefas li {
+    flex: 1;
+    font-size: 18px;
+  }
+  
+  /* Botões dentro da tarefa */
+  .tarefas button {
+    margin-left: 10px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 15px;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .tarefas button:nth-child(1) {
+    background-color: #2e7d32; /* realizada */
+  }
+  
+  .tarefas button:nth-child(2) {
+    background-color: #c62828; /* não realizada */
+  }
+  
+  .tarefas button:nth-child(3) {
+    background-color: #f9a825; /* pendente */
+  }
+
+  
+  /* Botão de apagar tudo */
+  .container > button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .container > button:hover {
+    background-color: #b71c1c;
+  }
+  
+
+.tarefas.realizada {
+    background-color: #2e7d32 ;
+  }
+  
+  .tarefas.naoRealizada {
+    background-color: #c62828 ;
+  }
+  
+  .tarefas.pendente {
+    background-color: #f9a825;
+  }
+  
