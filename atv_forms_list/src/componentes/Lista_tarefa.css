@@ -116,3 +116,20 @@
     background-color: #f9a825;
   }
   
+
+/* Botões de mover ↑ ↓ */
+.botoes-mover {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.botoes-mover button {
+  padding: 4px 6px;
+  width: 20px;
+  transition: background-color 0.3s;
+}
+
+.botoes-mover button:hover {
+  background-color: #bbb;
+}
