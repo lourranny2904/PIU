@@ -38,7 +38,12 @@ export default function Lista_tarefa() {
   
     listaTarefa(novaLista);
   };
-  
+    
+  const excluirTarefa = (index) => {
+    const novaLista = [...lista];
+    novaLista.splice(index, 1);
+    listaTarefa(novaLista);
+  };
 
   return (
     <div className='container'>
@@ -61,12 +66,14 @@ export default function Lista_tarefa() {
                 <button onClick={() => mudarEstado(index, 'realizada')}>realizada</button>
                 <button onClick={() => mudarEstado(index, 'naoRealizada')}>não realizada</button>
                 <button onClick={() => mudarEstado(index, 'pendente')}>pendente</button>
+                <button onClick={() => excluirTarefa(index)}>apagar tarefa</button>
               </div>
               <div className="botoes-mover">
                 <button onClick={() => moverTarefa(index, -1)}>↑</button>
                 <button onClick={() => moverTarefa(index, 1)}>↓</button>
               </div>
             </li>
+           
           </div>
         ))}
       </ul>
