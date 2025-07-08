@@ -1,135 +1,202 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #333;
+}
+
 /* Container principal */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-  }
-  
-  /* Formulário */
-  form {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  input[type="text"] {
-    padding: 10px;
-    width: 300px;
-    border: 2px solid #ccc;
-    border-radius: 15px;
-    font-size: 16px;
-  }
-  
-  input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  
-  /* Lista de tarefas */
-  ul {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    max-width: 650px;
-  }
-  
+  max-width: 600px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
 
-  .tarefas {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    border: 2px solid white;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    padding: 10px 20px;
-    color: black;
-  }
-  
-  .tarefas li {
-    flex: 1;
-    font-size: 18px;
-  }
-  
-  /* Botões dentro da tarefa */
-  .tarefas button {
-    margin-left: 10px;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 15px;
-    font-size: 14px;
-    cursor: pointer;
-    color: white;
-  }
-  
-  .tarefas button:nth-child(1) {
-    background-color: #2e7d32; /* realizada */
-  }
-  
-  .tarefas button:nth-child(2) {
-    background-color: #c62828; /* não realizada */
-  }
-  
-  .tarefas button:nth-child(3) {
-    background-color: #f9a825; /* pendente */
-  }
+/* Formulário de nova tarefa */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
-  
-  /* Botão de apagar tudo */
-  .container > button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #d32f2f;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .container > button:hover {
-    background-color: #b71c1c;
-  }
-  
+form input[type="text"] {
+  flex: 1;
+  padding: 10px 14px;
+  width: 440px;
+  border: 1px solid #c6c5c5;
+  border-radius: 8px;
+  font-size: 16px;
+}
+input{
+  background-color: white;
+}
 
-.tarefas.realizada {
-    background-color: #2e7d32 ;
-  }
-  
-  .tarefas.naoRealizada {
-    background-color: #c62828 ;
-  }
-  
-  .tarefas.pendente {
-    background-color: #f9a825;
-  }
-  
+form input[type="submit"] {
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: black;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
 
-/* Botões de mover ↑ ↓ */
-.botoes-mover {
+form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.container-editar{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.editar{
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #dc3545;
+  color: bla;
+  border: none;
+  width: 45%;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 15px;
+
+}
+
+.input-editar{
+  border:  1px solid #c6c5c5;
+  height: 30px;
+  color: black;
+}
+
+/* Botão de apagar tudo */
+button {
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #dc3545;
+  color: black;
+  border: none;
+  width: 540px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background-color: #bb2d3b;
+}
+
+/* Lista de tarefas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tarefas {
+  background: #f1f3f5;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  position: relative;
+  transition: background 0.3s ease;
+  font-size: 25px;
+}
+
+.tarefas li {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 8px;
 }
 
+.tarefas.realizada {
+  background-color: #d4edda;
+  border-left: 6px solid #28a745;
+  text-decoration: line-through;
+  color: #555;
+}
+
+.tarefas.naoRealizada {
+  background-color: #f8d7da;
+  border-left: 6px solid #dc3545;
+}
+
+.tarefas.pendente {
+  background-color: #fff3cd;
+  border-left: 6px solid #ffc107;
+}
+
+/* Botões de ação */
+.botoes-estado, .botoes-mover {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.botoes-estado button,
 .botoes-mover button {
-  padding: 4px 6px;
-  width: 20px;
-  transition: background-color 0.3s;
+  flex: 1;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: none;
 }
 
+.botoes-estado button:hover,
 .botoes-mover button:hover {
-  background-color: #bbb;
+  opacity: 0.8;
+}
+
+.botoes-estado button:nth-child(1) { background: #28a745; color: black; }
+.botoes-estado button:nth-child(2) { background: #dc3545; color: black; }
+.botoes-estado button:nth-child(3) { background: #ffc107; color: black; }
+.botoes-estado button:nth-child(4) { background: #b7b9bb; color: black; }
+
+.botoes-mover button:nth-child(1),
+.botoes-mover button:nth-child(2) {
+  background-color: black;
+  color: white;
+}
+
+/* Filtro de tarefas */
+.filtros {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.filtros button {
+  flex: 1;
+  padding: 10px;
+  background-color: #e9ecef;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.filtros button:hover {
+  background-color: #dee2e6;
+}
+
+.filtros button.ativo {
+  background-color: #007bff;
+  color: white;
 }
