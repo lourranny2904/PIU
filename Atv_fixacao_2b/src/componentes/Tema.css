@@ -1,0 +1,31 @@
+/* Tema.css */
+
+
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+  }
+  
+  /* --- Tema Claro --- */
+  body.light-theme {
+    background-color: #f0f2f5; /* Fundo bem claro */
+    color: #333; /* Texto escuro */
+  }
+  
+  
+  /* --- Tema Escuro --- */
+  body.dark-theme {
+    background-color: black; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
+  }
+  
+  body.dark-theme .card {
+    background-color: #3a3f47; 
+    border: 1px solid #555;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
+  }
+
+  
+
+  
